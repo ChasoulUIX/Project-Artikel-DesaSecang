@@ -2,36 +2,36 @@
 
 @section('content')
 
-<div class="container mx-auto px-[0px]">
+<div class="container mx-auto px-[10px] md:px-[0px]">
     {{-- Header Banner Slider --}}
     <div class="w-full bg-white dark:bg-gray-800 rounded-lg shadow-sm mb-8 relative">
         <div class="slider overflow-hidden">
             <div class="slides flex transition-transform duration-500">
                 <div class="relative w-full flex-shrink-0">
-                    <img src="{{ asset('images/background_sawah.jpg') }}" alt="Banner 1" class="w-full h-[400px] rounded-lg object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
-                        <span class="text-white bg-blue-900 dark:bg-blue-700 px-3 py-1 rounded-full text-sm mb-3 inline-block">Berita Terkini</span>
-                        <h2 class="text-white text-3xl font-bold mb-2">Perkembangan Pertanian Modern di Indonesia</h2>
-                        <p class="text-gray-200 mb-4">Inovasi teknologi pertanian membawa perubahan signifikan bagi petani Indonesia</p>
-                        <a href="#" class="inline-block bg-white text-blue-900 dark:bg-gray-800 dark:text-white px-6 py-2 rounded-full hover:bg-blue-900 hover:text-white dark:hover:bg-blue-700 transition-colors">Baca Selengkapnya</a>
+                    <img src="{{ asset('images/background_sawah.jpg') }}" alt="Banner 1" class="w-full h-[250px] md:h-[400px] rounded-lg object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 md:p-8">
+                        <span class="text-white bg-blue-900 dark:bg-blue-700 px-3 py-1 rounded-full text-xs md:text-sm mb-2 md:mb-3 inline-block">Berita Terkini</span>
+                        <h2 class="text-white text-xl md:text-3xl font-bold mb-2">Perkembangan Pertanian Modern di Indonesia</h2>
+                        <p class="text-gray-200 text-sm md:text-base mb-4">Inovasi teknologi pertanian membawa perubahan signifikan bagi petani Indonesia</p>
+                        <a href="#" class="inline-block bg-white text-blue-900 dark:bg-gray-800 dark:text-white px-4 md:px-6 py-2 rounded-full text-sm hover:bg-blue-900 hover:text-white dark:hover:bg-blue-700 transition-colors">Baca Selengkapnya</a>
                     </div>
                 </div>
                 <div class="relative w-full flex-shrink-0">
-                    <img src="{{ asset('images/background_sawah.jpg') }}" alt="Banner 2" class="w-full h-[400px] rounded-lg object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
-                        <span class="text-white bg-blue-900 px-3 py-1 rounded-full text-sm mb-3 inline-block">Artikel Khusus</span>
-                        <h2 class="text-white text-3xl font-bold mb-2">Tradisi Pesantren di Era Digital</h2>
-                        <p class="text-gray-200 mb-4">Bagaimana pesantren beradaptasi dengan perkembangan teknologi modern</p>
-                        <a href="#" class="inline-block bg-white text-blue-900 px-6 py-2 rounded-full hover:bg-blue-900 hover:text-white transition-colors">Baca Selengkapnya</a>
+                    <img src="{{ asset('images/background_sawah.jpg') }}" alt="Banner 2" class="w-full h-[250px] md:h-[400px] rounded-lg object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 md:p-8">
+                        <span class="text-white bg-blue-900 px-3 py-1 rounded-full text-xs md:text-sm mb-2 md:mb-3 inline-block">Artikel Khusus</span>
+                        <h2 class="text-white text-xl md:text-3xl font-bold mb-2">Tradisi Pesantren di Era Digital</h2>
+                        <p class="text-gray-200 text-sm md:text-base mb-4">Bagaimana pesantren beradaptasi dengan perkembangan teknologi modern</p>
+                        <a href="#" class="inline-block bg-white text-blue-900 px-4 md:px-6 py-2 rounded-full text-sm hover:bg-blue-900 hover:text-white transition-colors">Baca Selengkapnya</a>
                     </div>
                 </div>
                 <div class="relative w-full flex-shrink-0">
-                    <img src="{{ asset('images/background_sawah.jpg') }}" alt="Banner 3" class="w-full h-[400px] rounded-lg object-cover">
-                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
-                        <span class="text-white bg-blue-900 px-3 py-1 rounded-full text-sm mb-3 inline-block">Feature</span>
-                        <h2 class="text-white text-3xl font-bold mb-2">Kebangkitan Ekonomi Syariah</h2>
-                        <p class="text-gray-200 mb-4">Perkembangan dan potensi ekonomi syariah di Indonesia</p>
-                        <a href="#" class="inline-block bg-white text-blue-900 px-6 py-2 rounded-full hover:bg-blue-900 hover:text-white transition-colors">Baca Selengkapnya</a>
+                    <img src="{{ asset('images/background_sawah.jpg') }}" alt="Banner 3" class="w-full h-[250px] md:h-[400px] rounded-lg object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 md:p-8">
+                        <span class="text-white bg-blue-900 px-3 py-1 rounded-full text-xs md:text-sm mb-2 md:mb-3 inline-block">Feature</span>
+                        <h2 class="text-white text-xl md:text-3xl font-bold mb-2">Kebangkitan Ekonomi Syariah</h2>
+                        <p class="text-gray-200 text-sm md:text-base mb-4">Perkembangan dan potensi ekonomi syariah di Indonesia</p>
+                        <a href="#" class="inline-block bg-white text-blue-900 px-4 md:px-6 py-2 rounded-full text-sm hover:bg-blue-900 hover:text-white transition-colors">Baca Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -78,9 +78,9 @@
     </script>
 
     {{-- Main Content Grid --}}
-    <div class="grid grid-cols-12 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
         {{-- Left Column --}}
-        <div class="col-span-3 space-y-6">
+        <div class="md:col-span-3 space-y-6">
             <a href="/artikel" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
                 <img src="{{ asset('images/prabowo.jpg') }}" alt="Article" class="w-full h-48 object-cover">
                 <div class="p-4">
@@ -108,9 +108,9 @@
         </div>
 
         {{-- Center Column (Featured Articles) --}}
-        <div class="col-span-6 space-y-6">
+        <div class="md:col-span-6 space-y-6">
             <a href="/artikel" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
-                <img src="{{ asset('images/madu.jpg') }}" alt="Main Article" class="w-full h-[400px] object-cover">
+                <img src="{{ asset('images/madu.jpg') }}" alt="Main Article" class="w-full h-[300px] md:h-[400px] object-cover">
                 <div class="p-4">
                     <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-sm px-3 py-1 rounded-full mb-2">Laporan Khusus</span>
                     <h2 class="text-xl font-bold mb-2 dark:text-white">Artikel KH Sahal Mahfudh: Keluarga Maslahah Modern</h2>
@@ -142,7 +142,7 @@
         </div>
 
         {{-- Right Column --}}
-        <div class="col-span-3 space-y-6">
+        <div class="md:col-span-3 space-y-6">
             <a href="/artikel" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
                 <img src="{{ asset('images/ronald.jpg') }}" alt="Article" class="w-full h-48 object-cover">
                 <div class="p-4">
@@ -176,7 +176,7 @@
             <a href="#" class="text-gray-400 dark:text-gray-300 dark:hover:text-gray-100">Lihat Semua</a>
         </div>
         
-        <div class="grid grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             {{-- Left Column --}}
             <div class="space-y-4">
                 <!-- News Item 1 -->
@@ -296,7 +296,7 @@
 
     <div class="mt-6">
         <h2 class="text-xl font-bold mb-4 dark:text-white">Kategori</h2>
-        <div class="grid grid-cols-6 gap-4">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
             <a href="#" class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-3 text-blue-900 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M12 14l9-5-9-5-9 5 9 5z" />

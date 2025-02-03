@@ -56,10 +56,17 @@
 <body class="dark:bg-gray-900 dark:text-white">
     <!-- Top Navigation Bar -->
     <nav class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
-        <div class="container mx-auto px-[150px]">
+        <div class="container mx-auto px-2.5 md:px-[150px]">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo Section (Centered) -->
-                <div class="flex-1 flex justify-start">
+                <!-- Logo Section with Hamburger Menu -->
+                <div class="flex-1 flex items-center gap-4">
+                    <!-- Mobile Menu Button -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    
                     <a href="{{ url('/') }}" class="flex items-center">
                         <img src="{{ asset('images/probolinggo.png') }}" alt="NU Online" class="h-10">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/2048px-Twitter_Verified_Badge.svg.png" alt="Terverifikasi" class="h-6 ml-2">
@@ -68,7 +75,7 @@
 
                 <!-- Search Bar -->
                 <div class="flex items-center space-x-4">
-                    <div class="relative">
+                    <div class="relative hidden md:block">
                         <input type="text" placeholder="Cari Berita" 
                             class="w-64 px-4 py-2 rounded-full bg-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-200">
                         <button class="absolute right-3 top-2">
@@ -121,35 +128,61 @@
     </nav>
 
     <!-- Main Navigation Menu -->
-    <div class="bg-blue-900 dark:bg-gray-800 text-white mx-[280px]">
-            <div class="flex justify-center text-sm">
-                <a href="/" class="px-4 py-3 hover:bg-blue-800 transition-colors">Home</a>
-                <a href="/berita" class="px-4 py-3 hover:bg-blue-800 transition-colors">Berita</a>
-                <div class="group relative">
-                    <a href="#" class="px-4 py-3 hover:bg-blue-800 transition-colors flex items-center">
-                        Artikel
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </a>
-                    <div class="hidden group-hover:block absolute left-0 bg-blue-900 w-48 z-50">
-                        <a href="/pendidikan" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Pendidikan</a>
-                        <a href="/kerukunan" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Kerukunan</a>
-                        <a href="/politik" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Politik</a>
-                        <a href="/budaya" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Budaya</a>
-                        <a href="/khutbah" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Khutbah</a>
-                        <a href="/doa" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Doa</a>
-                    </div>
+    <div class="bg-blue-900 dark:bg-gray-800 text-white mx-2.5 md:mx-[280px]">
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex flex-wrap justify-center text-sm">
+            <a href="/" class="px-4 py-3 hover:bg-blue-800 transition-colors">Home</a>
+            <a href="/berita" class="px-4 py-3 hover:bg-blue-800 transition-colors">Berita</a>
+            <div class="group relative">
+                <a href="#" class="px-4 py-3 hover:bg-blue-800 transition-colors flex items-center">
+                    Artikel
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </a>
+                <div class="hidden group-hover:block absolute left-0 bg-blue-900 w-48 z-50">
+                    <a href="/pendidikan" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Pendidikan</a>
+                    <a href="/kerukunan" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Kerukunan</a>
+                    <a href="/politik" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Politik</a>
+                    <a href="/budaya" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Budaya</a>
+                    <a href="/khutbah" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Khutbah</a>
+                    <a href="/doa" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Doa</a>
                 </div>
-                <a href="/populer" class="px-4 py-3 hover:bg-blue-800 transition-colors">Populer</a>
-                <a href="/tentangkami" class="px-4 py-3 hover:bg-blue-800 transition-colors">Tentang Kami</a>
-                <a href="/hubungikami" class="px-4 py-3 hover:bg-blue-800 transition-colors">Hubungi Kami</a>
             </div>
+            <a href="/populer" class="px-4 py-3 hover:bg-blue-800 transition-colors">Populer</a>
+            <a href="/tentangkami" class="px-4 py-3 hover:bg-blue-800 transition-colors">Tentang Kami</a>
+            <a href="/hubungikami" class="px-4 py-3 hover:bg-blue-800 transition-colors">Hubungi Kami</a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden w-full">
+            <a href="/" class="block px-4 py-3 hover:bg-blue-800 transition-colors">Home</a>
+            <a href="/berita" class="block px-4 py-3 hover:bg-blue-800 transition-colors">Berita</a>
+            <div class="relative">
+                <button onclick="toggleMobileSubmenu()" class="w-full px-4 py-3 hover:bg-blue-800 transition-colors flex items-center justify-between">
+                    Artikel
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <div id="mobileSubmenu" class="hidden bg-blue-800">
+                    <a href="/pendidikan" class="block px-8 py-2 hover:bg-blue-700 transition-colors">Pendidikan</a>
+                    <a href="/kerukunan" class="block px-8 py-2 hover:bg-blue-700 transition-colors">Kerukunan</a>
+                    <a href="/politik" class="block px-8 py-2 hover:bg-blue-700 transition-colors">Politik</a>
+                    <a href="/budaya" class="block px-8 py-2 hover:bg-blue-700 transition-colors">Budaya</a>
+                    <a href="/khutbah" class="block px-8 py-2 hover:bg-blue-700 transition-colors">Khutbah</a>
+                    <a href="/doa" class="block px-8 py-2 hover:bg-blue-700 transition-colors">Doa</a>
+                </div>
+            </div>
+            <a href="/populer" class="block px-4 py-3 hover:bg-blue-800 transition-colors">Populer</a>
+            <a href="/tentangkami" class="block px-4 py-3 hover:bg-blue-800 transition-colors">Tentang Kami</a>
+            <a href="/hubungikami" class="block px-4 py-3 hover:bg-blue-800 transition-colors">Hubungi Kami</a>
+        </div>
     </div>
 
     <!-- Secondary Navigation (Regions) -->
     <div class="border-b dark:border-gray-700">
-        <div class="container mx-auto px-[150px]">
+        <div class="container mx-auto px-2.5 md:px-[150px]">
             <div class="flex items-center justify-between px-4">
                 <div class="flex space-x-6 text-sm text-gray-600 dark:text-gray-400 py-2">
                     <a href="#" class="hover:text-blue-900">Jawa Timur, Desa Secang</a>
@@ -162,21 +195,21 @@
     </div>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-[150px] py-6">
+    <main class="container mx-auto px-2.5 md:px-[150px] py-6">
         @yield('content')
     </main>
 
     <!-- Footer -->
     <footer class="bg-gray-300 dark:bg-gray-900 py-12">
-        <div class="container mx-auto px-4">
+        <div class="container mx-auto px-2.5 md:px-4">
             <!-- Logo and Company Name -->
             <div class="flex flex-col items-center mb-8">
                 <img src="{{ asset('images/probolinggo.png') }}" alt="Arina.id" class="h-12 mb-2">
-                <p class="text-gray-600 dark:text-gray-400">Desa Secang, Kecamatan Kediri, Kabupaten Probolinggo, Jawa Timur</p>
+                <p class="text-gray-600 dark:text-gray-400 text-center">Desa Secang, Kecamatan Kediri, Kabupaten Probolinggo, Jawa Timur</p>
             </div>
 
             <!-- Social Media Links -->
-            <div class="flex justify-center gap-4 mb-8">
+            <div class="flex justify-center gap-4 mb-8 flex-wrap">
                 <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700">
                     <i class="fab fa-twitter text-gray-600 dark:text-gray-400"></i>
                 </a>
@@ -200,11 +233,10 @@
             <!-- Network Title -->
             <div class="text-center mb-8">
                 <h3 class="text-emerald-500 font-medium text-xl mb-4">JARINGAN MEDIA</h3>
-
             </div>
 
             <!-- Footer Links -->
-            <div class="flex justify-center gap-6 mb-8 text-sm">
+            <div class="flex flex-wrap justify-center gap-6 mb-8 text-sm px-2.5">
                 <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-emerald-500">Tentang Kami</a>
                 <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-emerald-500">Redaksi</a>
                 <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-emerald-500">Pedoman Media Siber</a>
@@ -299,6 +331,16 @@
                 document.body.appendChild(googleTranslateScript);
             }, 1000);
         });
+
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        function toggleMobileSubmenu() {
+            const mobileSubmenu = document.getElementById('mobileSubmenu');
+            mobileSubmenu.classList.toggle('hidden');
+        }
     </script>
 
     <!-- Add hidden Google Translate Element -->
