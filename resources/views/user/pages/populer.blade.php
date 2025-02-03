@@ -11,7 +11,7 @@
         <div class="col-span-8">
             <a href="/artikel">
                 <div class="relative h-[28rem] rounded-xl overflow-hidden">
-                    <img src="{{ asset('images/prabowo.jpg') }}" class="w-full h-full object-cover" alt="Main News">
+                    <img src="{{ asset('images/obama.jpg') }}" class="w-full h-full object-cover" alt="Main News">
                     <div class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
                         <span class="inline-block bg-blue-900 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded mb-2">Berita</span>
                         <h2 class="text-white text-2xl font-bold">Dunia Berubah, NU Berubah, Kita pun Perlu Menyesuaikan Perubahan</h2>
