@@ -7,7 +7,7 @@ Route::get('/', function () {
 });
 
 Route::get('/berita', function () {
-    return view('user.pages.article');
+    return view('user.pages.berita');
 });
 
 Route::get('/kategori', function () {

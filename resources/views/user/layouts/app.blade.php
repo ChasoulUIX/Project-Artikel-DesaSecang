@@ -77,8 +77,8 @@
     <!-- Main Navigation Menu -->
     <div class="bg-blue-900 text-white mx-[280px]">
             <div class="flex justify-center text-sm">
-                <a href="#" class="px-4 py-3 hover:bg-blue-800 transition-colors">Home</a>
-                <a href="#" class="px-4 py-3 hover:bg-blue-800 transition-colors">Berita</a>
+                <a href="/" class="px-4 py-3 hover:bg-blue-800 transition-colors">Home</a>
+                <a href="/berita" class="px-4 py-3 hover:bg-blue-800 transition-colors">Berita</a>
                 <div class="group relative">
                     <a href="#" class="px-4 py-3 hover:bg-blue-800 transition-colors flex items-center">
                         Artikel

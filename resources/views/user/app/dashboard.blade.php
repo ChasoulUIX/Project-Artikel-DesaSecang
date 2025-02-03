@@ -10,28 +10,28 @@
                 <div class="relative w-full flex-shrink-0">
                     <img src="{{ asset('images/background_sawah.jpg') }}" alt="Banner 1" class="w-full h-[400px] rounded-lg object-cover">
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
-                        <span class="text-white bg-[#00923F] px-3 py-1 rounded-full text-sm mb-3 inline-block">Berita Terkini</span>
+                        <span class="text-white bg-blue-900 px-3 py-1 rounded-full text-sm mb-3 inline-block">Berita Terkini</span>
                         <h2 class="text-white text-3xl font-bold mb-2">Perkembangan Pertanian Modern di Indonesia</h2>
                         <p class="text-gray-200 mb-4">Inovasi teknologi pertanian membawa perubahan signifikan bagi petani Indonesia</p>
-                        <a href="#" class="inline-block bg-white text-[#00923F] px-6 py-2 rounded-full hover:bg-[#00923F] hover:text-white transition-colors">Baca Selengkapnya</a>
+                        <a href="#" class="inline-block bg-white text-blue-900 px-6 py-2 rounded-full hover:bg-blue-900 hover:text-white transition-colors">Baca Selengkapnya</a>
                     </div>
                 </div>
                 <div class="relative w-full flex-shrink-0">
                     <img src="{{ asset('images/background_sawah.jpg') }}" alt="Banner 2" class="w-full h-[400px] rounded-lg object-cover">
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
-                        <span class="text-white bg-[#00923F] px-3 py-1 rounded-full text-sm mb-3 inline-block">Artikel Khusus</span>
+                        <span class="text-white bg-blue-900 px-3 py-1 rounded-full text-sm mb-3 inline-block">Artikel Khusus</span>
                         <h2 class="text-white text-3xl font-bold mb-2">Tradisi Pesantren di Era Digital</h2>
                         <p class="text-gray-200 mb-4">Bagaimana pesantren beradaptasi dengan perkembangan teknologi modern</p>
-                        <a href="#" class="inline-block bg-white text-[#00923F] px-6 py-2 rounded-full hover:bg-[#00923F] hover:text-white transition-colors">Baca Selengkapnya</a>
+                        <a href="#" class="inline-block bg-white text-blue-900 px-6 py-2 rounded-full hover:bg-blue-900 hover:text-white transition-colors">Baca Selengkapnya</a>
                     </div>
                 </div>
                 <div class="relative w-full flex-shrink-0">
                     <img src="{{ asset('images/background_sawah.jpg') }}" alt="Banner 3" class="w-full h-[400px] rounded-lg object-cover">
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-8">
-                        <span class="text-white bg-[#00923F] px-3 py-1 rounded-full text-sm mb-3 inline-block">Feature</span>
+                        <span class="text-white bg-blue-900 px-3 py-1 rounded-full text-sm mb-3 inline-block">Feature</span>
                         <h2 class="text-white text-3xl font-bold mb-2">Kebangkitan Ekonomi Syariah</h2>
                         <p class="text-gray-200 mb-4">Perkembangan dan potensi ekonomi syariah di Indonesia</p>
-                        <a href="#" class="inline-block bg-white text-[#00923F] px-6 py-2 rounded-full hover:bg-[#00923F] hover:text-white transition-colors">Baca Selengkapnya</a>
+                        <a href="#" class="inline-block bg-white text-blue-900 px-6 py-2 rounded-full hover:bg-blue-900 hover:text-white transition-colors">Baca Selengkapnya</a>
                     </div>
                 </div>
             </div>
