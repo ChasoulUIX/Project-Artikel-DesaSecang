@@ -11,7 +11,14 @@
         <div class="col-span-1 lg:col-span-8">
             <a href="/artikel">
                 <div class="relative h-[20rem] lg:h-[28rem] rounded-xl overflow-hidden">
-                    <img src="{{ asset('images/prabowo.jpg') }}" class="w-full h-full object-cover" alt="Main News">
+                    @php
+                        $images = [
+                            'berita1.jpg', 'berita2.jpg', 'berita3.jpeg', 'berita4.jpg',
+                            'berita5.jpeg', 'berita6.jpeg', 'berita7.webp', 'berita8.webp', 'berita9.webp'
+                        ];
+                        $randomImage = $images[array_rand($images)];
+                    @endphp
+                    <img src="{{ asset('images/' . $randomImage) }}" class="w-full h-full object-cover" alt="Main News">
                     <div class="absolute bottom-0 left-0 right-0 p-4 lg:p-6 bg-gradient-to-t from-black/80 to-transparent">
                         <span class="inline-block bg-blue-900 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded mb-2">Berita</span>
                         <h2 class="text-white text-xl lg:text-2xl font-bold">Dunia Berubah, NU Berubah, Kita pun Perlu Menyesuaikan Perubahan</h2>
@@ -46,7 +53,10 @@
                 @for ($i = 1; $i <= 9; $i++)
                 <a href="/artikel" class="flex flex-col sm:flex-row gap-4 items-start">
                     <div class="w-full sm:w-48 h-48 sm:h-32 flex-shrink-0">
-                        <img src="/images/prabowo.jpg" alt="Article {{$i}}" class="w-full h-full object-cover rounded-lg">
+                        @php
+                            $randomImage = $images[array_rand($images)];
+                        @endphp
+                        <img src="{{ asset('images/' . $randomImage) }}" alt="Article {{$i}}" class="w-full h-full object-cover rounded-lg">
                     </div>
                     <div class="flex-1">
                         <div class="flex items-center gap-3 mb-2">
@@ -72,7 +82,10 @@
                     @for ($i = 1; $i <= 5; $i++)
                     <div class="group">
                         <a href="/artikel" class="flex items-start gap-3">
-                            <img src="images/prabowo.jpg" alt="Artikel" class="w-16 sm:w-20 h-16 sm:h-20 object-cover rounded-lg">
+                            @php
+                                $randomImage = $images[array_rand($images)];
+                            @endphp
+                            <img src="{{ asset('images/' . $randomImage) }}" alt="Artikel" class="w-16 sm:w-20 h-16 sm:h-20 object-cover rounded-lg">
                             <div>
                                 <span class="text-xs font-medium text-emerald-600 dark:text-emerald-400 uppercase">KOLOM</span>
                                 <h4 class="font-bold text-sm lg:text-base text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400">

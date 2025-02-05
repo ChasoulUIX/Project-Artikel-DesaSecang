@@ -68,7 +68,7 @@
                     </button>
                     
                     <a href="{{ url('/') }}" class="flex items-center">
-                        <img src="{{ asset('images/probolinggo.png') }}" alt="NU Online" class="h-10">
+                        <img src="{{ asset('images/logoreligi.png') }}" alt="NU Online" class="h-10">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/2048px-Twitter_Verified_Badge.svg.png" alt="Terverifikasi" class="h-6 ml-2">
                     </a>
                 </div>
@@ -204,7 +204,7 @@
         <div class="container mx-auto px-2.5 md:px-4">
             <!-- Logo and Company Name -->
             <div class="flex flex-col items-center mb-8">
-                <img src="{{ asset('images/probolinggo.png') }}" alt="Arina.id" class="h-12 mb-2">
+                <img src="{{ asset('images/logoreligi.png') }}" alt="Arina.id" class="h-12 mb-2">
                 <p class="text-gray-600 dark:text-gray-400 text-center">Desa Secang, Kecamatan Kediri, Kabupaten Probolinggo, Jawa Timur</p>
             </div>
 
@@ -247,7 +247,7 @@
 
             <!-- Copyright -->
             <div class="text-center text-sm text-gray-600 dark:text-gray-400">
-                © 2025 Desa Secang
+                © 2025 RELIGI.ID
             </div>
         </div>
     </footer>

@@ -4,12 +4,12 @@
 <div class="container mx-auto px-2.5 md:px-0">
     <!-- Hero Section -->
     <section class="relative h-[400px] mb-16 rounded-2xl overflow-hidden">
-        <img src="{{ asset('images/background_sawah.jpg') }}" alt="NU Desa Secang" class="w-full h-full object-cover">
+        <img src="{{ asset('images/background_sawah.jpg') }}" alt="RELIGI.ID" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-transparent flex items-center">
             <div class="px-4 md:px-12">
-                <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Berita Desa Secang</h1>
+                <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">RELIGI.ID</h1>
                 <p class="text-lg md:text-xl text-white/90 max-w-2xl">
-                    Portal Berita dan Informasi Terkini Seputar Desa Secang dan Sekitarnya
+                    Portal Berita dan Informasi Keagamaan Terkini
                 </p>
             </div>
         </div>
@@ -23,10 +23,10 @@
         </div>
         <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow">
             <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                Portal Berita Desa Secang merupakan media informasi digital yang menyajikan berita dan informasi terkini seputar Desa Secang dan wilayah sekitarnya. Kami berkomitmen untuk memberikan liputan berita yang aktual, faktual dan terpercaya mengenai berbagai aspek kehidupan masyarakat desa.
+                RELIGI.ID merupakan media informasi digital yang menyajikan berita dan informasi terkini seputar keagamaan dan spiritualitas. Kami berkomitmen untuk memberikan liputan berita yang aktual, faktual dan terpercaya mengenai berbagai aspek kehidupan beragama di Indonesia.
             </p>
             <p class="text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                Sebagai portal berita lokal, kami fokus pada pemberitaan yang menyangkut pembangunan desa, kegiatan masyarakat, budaya, pendidikan, ekonomi, dan berbagai informasi penting lainnya yang relevan dengan warga Desa Secang.
+                Sebagai portal berita keagamaan, kami fokus pada pemberitaan yang menyangkut nilai-nilai spiritual, kegiatan keagamaan, pendidikan agama, dakwah, dan berbagai informasi penting lainnya yang relevan dengan kehidupan beragama masyarakat Indonesia.
             </p>
         </div>
     </section>
@@ -41,21 +41,21 @@
             <div class="bg-gradient-to-br from-emerald-500 to-emerald-600 dark:from-emerald-600 dark:to-emerald-700 rounded-2xl shadow-lg p-6 md:p-8 text-white">
                 <h3 class="text-xl md:text-2xl font-bold mb-6">Berita Utama</h3>
                 <ul class="space-y-3 text-base md:text-lg">
-                    <li>Pembangunan Desa</li>
-                    <li>Kegiatan Pemerintah Desa</li>
-                    <li>Program Masyarakat</li>
-                    <li>Ekonomi & UMKM</li>
-                    <li>Pendidikan & Kesehatan</li>
+                    <li>Berita Keagamaan</li>
+                    <li>Kajian & Ceramah</li>
+                    <li>Pendidikan Agama</li>
+                    <li>Kegiatan Dakwah</li>
+                    <li>Inspirasi & Motivasi</li>
                 </ul>
             </div>
             <div class="bg-gradient-to-br from-blue-800 to-blue-900 dark:from-blue-700 dark:to-blue-800 rounded-2xl shadow-lg p-6 md:p-8 text-white">
                 <h3 class="text-xl md:text-2xl font-bold mb-6">Informasi Khusus</h3>
                 <ul class="space-y-3 text-base md:text-lg">
-                    <li>Budaya & Tradisi</li>
-                    <li>Agenda Desa</li>
-                    <li>Profil UMKM</li>
-                    <li>Wisata Desa</li>
-                    <li>Info Layanan Publik</li>
+                    <li>Artikel Islami</li>
+                    <li>Jadwal Ibadah</li>
+                    <li>Kisah Teladan</li>
+                    <li>Tanya Jawab Agama</li>
+                    <li>Info Masjid & Pesantren</li>
                 </ul>
             </div>
         </div>

@@ -8,25 +8,24 @@
         <div class="slider overflow-hidden">
             <div class="slides flex transition-transform duration-500">
                 <div class="relative w-full flex-shrink-0">
-                    <img src="{{ asset('images/background_sawah.jpg') }}" alt="Banner 1" class="w-full h-[250px] md:h-[400px] rounded-lg object-cover">
+                    <img src="{{ asset('images/header1.jpeg') }}" alt="Banner 1" class="w-full h-[250px] md:h-[400px] rounded-lg object-cover">
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 md:p-8">
                         <span class="text-white bg-blue-900 dark:bg-blue-700 px-3 py-1 rounded-full text-xs md:text-sm mb-2 md:mb-3 inline-block">Berita Terkini</span>
-                        <h2 class="text-white text-xl md:text-3xl font-bold mb-2">Perkembangan Pertanian Modern di Indonesia</h2>
-                        <p class="text-gray-200 text-sm md:text-base mb-4">Inovasi teknologi pertanian membawa perubahan signifikan bagi petani Indonesia</p>
+                        <h2 class="text-white text-xl md:text-3xl font-bold mb-2">Jumat Religius Untuk Membangun Karakter Positif</h2>
+                        <p class="text-gray-200 text-sm md:text-base mb-4">Sebuah terobosan baru dari sekolah smkn1pasean dengan bekerjasama dengan</p>
                         <a href="#" class="inline-block bg-white text-blue-900 dark:bg-gray-800 dark:text-white px-4 md:px-6 py-2 rounded-full text-sm hover:bg-blue-900 hover:text-white dark:hover:bg-blue-700 transition-colors">Baca Selengkapnya</a>
                     </div>
                 </div>
                 <div class="relative w-full flex-shrink-0">
-                    <img src="{{ asset('images/background_sawah.jpg') }}" alt="Banner 2" class="w-full h-[250px] md:h-[400px] rounded-lg object-cover">
+                    <img src="{{ asset('images/header2.webp') }}" alt="Banner 2" class="w-full h-[250px] md:h-[400px] rounded-lg object-cover">
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 md:p-8">
                         <span class="text-white bg-blue-900 px-3 py-1 rounded-full text-xs md:text-sm mb-2 md:mb-3 inline-block">Artikel Khusus</span>
-                        <h2 class="text-white text-xl md:text-3xl font-bold mb-2">Tradisi Pesantren di Era Digital</h2>
-                        <p class="text-gray-200 text-sm md:text-base mb-4">Bagaimana pesantren beradaptasi dengan perkembangan teknologi modern</p>
+                        <h2 class="text-white text-xl md:text-3xl font-bold mb-2">Munas-Konbes NU 2025 Momentum Gaspol NU Menggapai Kemaslahatan Indonesia</h2>
                         <a href="#" class="inline-block bg-white text-blue-900 px-4 md:px-6 py-2 rounded-full text-sm hover:bg-blue-900 hover:text-white transition-colors">Baca Selengkapnya</a>
                     </div>
                 </div>
                 <div class="relative w-full flex-shrink-0">
-                    <img src="{{ asset('images/background_sawah.jpg') }}" alt="Banner 3" class="w-full h-[250px] md:h-[400px] rounded-lg object-cover">
+                    <img src="{{ asset('images/header3.webp') }}" alt="Banner 3" class="w-full h-[250px] md:h-[400px] rounded-lg object-cover">
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 md:p-8">
                         <span class="text-white bg-blue-900 px-3 py-1 rounded-full text-xs md:text-sm mb-2 md:mb-3 inline-block">Feature</span>
                         <h2 class="text-white text-xl md:text-3xl font-bold mb-2">Kebangkitan Ekonomi Syariah</h2>
@@ -82,10 +81,10 @@
         {{-- Left Column --}}
         <div class="md:col-span-3 space-y-6">
             <a href="/artikel" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
-                <img src="{{ asset('images/prabowo.jpg') }}" alt="Article" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/berita1.jpg') }}" alt="Article" class="w-full h-48 object-cover">
                 <div class="p-4">
                     <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-sm px-3 py-1 rounded-full mb-2">Nasional</span>
-                    <h3 class="font-bold text-lg mb-2 dark:text-white">Seleksi MAN Unggulan Kemenag Dibuka Hingga 15 Februari, Santri Lulusan PDF Bisa Daftar</h3>
+                    <h3 class="font-bold text-lg mb-2 dark:text-white">Paradoks Religius tapi Nakal, Ketika Keimanan Hanya Menjadi Simbol
                     <p class="text-gray-400 dark:text-gray-300 text-sm">Senin, 3 Februari 2025 | 06:00 WIB</p>
                 </div>
             </a>
@@ -110,20 +109,20 @@
         {{-- Center Column (Featured Articles) --}}
         <div class="md:col-span-6 space-y-6">
             <a href="/artikel" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
-                <img src="{{ asset('images/madu.jpg') }}" alt="Main Article" class="w-full h-[300px] md:h-[400px] object-cover">
+                <img src="{{ asset('images/berita3.jpeg') }}" alt="Main Article" class="w-full h-[300px] md:h-[400px] object-cover">
                 <div class="p-4">
                     <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-sm px-3 py-1 rounded-full mb-2">Laporan Khusus</span>
-                    <h2 class="text-xl font-bold mb-2 dark:text-white">Artikel KH Sahal Mahfudh: Keluarga Maslahah Modern</h2>
+                    <h2 class="text-xl font-bold mb-2 dark:text-white">Menjalin Kedektan dengan Al-Qur'an: One Day One Juz dan Khotmil Qur'an di Desa Slamparejo</h2>
                     <p class="text-gray-400 dark:text-gray-300 text-sm">Senin, 3 Februari 2025 | 12:30 WIB</p>
                 </div>
             </a>
 
             <a href="/artikel" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
                 <div class="flex">
-                    <img src="{{ asset('images/ronald.jpg') }}" alt="Article" class="w-32 h-32 object-cover">
+                    <img src="{{ asset('images/berita2.jpg') }}" alt="Article" class="w-32 h-32 object-cover">
                     <div class="p-2 flex-1">
                         <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded-full mb-1">Nasional</span>
-                        <h3 class="font-bold text-sm mb-1 dark:text-white">Inovasi Pembelajaran: Metode Baru Pesantren</h3>
+                        <h3 class="font-bold text-sm mb-1 dark:text-white">indonesia sebagai negara paling religius, tapi juga sebagai negera paling munafik</h3>
                         <p class="text-gray-400 dark:text-gray-300 text-xs">3 Feb 2025</p>
                     </div>
                 </div>
@@ -131,7 +130,7 @@
 
             <a href="/artikel" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
                 <div class="flex">
-                    <img src="{{ asset('images/ronald.jpg') }}" alt="Article" class="w-32 h-32 object-cover">
+                    <img src="{{ asset('images/berita4.jpg') }}" alt="Article" class="w-32 h-32 object-cover">
                     <div class="p-2 flex-1">
                         <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded-full mb-1">Laporan Khusus</span>
                         <h3 class="font-bold text-sm mb-1 dark:text-white">Transformasi Digital dalam Pendidikan Islam Modern</h3>
@@ -144,10 +143,10 @@
         {{-- Right Column --}}
         <div class="md:col-span-3 space-y-6">
             <a href="/artikel" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
-                <img src="{{ asset('images/ronald.jpg') }}" alt="Article" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/berita5.jpg') }}" alt="Article" class="w-full h-48 object-cover">
                 <div class="p-4">
                     <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-sm px-3 py-1 rounded-full mb-2">Nasional</span>
-                    <h3 class="font-bold text-lg mb-2 dark:text-white">Gus Ulil Tekankan Pentingnya Dakwah kepada Anak Muda Melalui Handphone</h3>
+                    <h3 class="font-bold text-lg mb-2 dark:text-white">Momentum Spiritualitas Mahasiswa KKM Philoxenia Semarakkan Diba' Rutinan Bersama Warga Glagah Ombo</h3>
                     <p class="text-gray-400 dark:text-gray-300 text-sm">Ahad, 2 Februari 2025 | 16:00 WIB</p>
                 </div>
             </a>
@@ -191,7 +190,7 @@
                             </div>
                         </div>
                         <div class="flex-shrink-0">
-                            <img src="{{ asset('images/prabowo.jpg') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
+                            <img src="{{ asset('images/berita5.jpeg') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
                         </div>
                     </div>
                 </a>
@@ -208,7 +207,7 @@
                             </div>
                         </div>
                         <div class="flex-shrink-0">
-                            <img src="{{ asset('images/prabowo.jpg') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
+                            <img src="{{ asset('images/berita6.jpeg') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
                         </div>
                     </div>
                 </a>
@@ -225,7 +224,7 @@
                             </div>
                         </div>
                         <div class="flex-shrink-0">
-                            <img src="{{ asset('images/prabowo.jpg') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
+                            <img src="{{ asset('images/berita7.webp') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
                         </div>
                     </div>
                 </a>
@@ -245,7 +244,7 @@
                             </div>
                         </div>
                         <div class="flex-shrink-0">
-                            <img src="{{ asset('images/prabowo.jpg') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
+                            <img src="{{ asset('images/berita8.webp') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
                         </div>
                     </div>
                 </a>
@@ -262,7 +261,7 @@
                             </div>
                         </div>
                         <div class="flex-shrink-0">
-                            <img src="{{ asset('images/prabowo.jpg') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
+                            <img src="{{ asset('images/berita9.webp') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
                         </div>
                     </div>
                 </a>
@@ -279,7 +278,7 @@
                             </div>
                         </div>
                         <div class="flex-shrink-0">
-                            <img src="{{ asset('images/prabowo.jpg') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
+                            <img src="{{ asset('images/berita10.webp') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
                         </div>
                     </div>
                 </a>
