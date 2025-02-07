@@ -6,6 +6,7 @@
     <title>{{ config('app.name') }}</title>
     <!-- CSS and other head elements -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         /* Webkit browsers (Chrome, Safari, newer versions of Opera) */
         ::-webkit-scrollbar {
@@ -68,8 +69,8 @@
                     </button>
                     
                     <a href="{{ url('/') }}" class="flex items-center">
-                        <img src="{{ asset('images/logoreligi.png') }}" alt="NU Online" class="h-10">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/2048px-Twitter_Verified_Badge.svg.png" alt="Terverifikasi" class="h-6 ml-2">
+                        <img src="{{ asset('images/logoreligi.png') }}" alt="NU Online" class="h-14">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/2048px-Twitter_Verified_Badge.svg.png" alt="Terverifikasi" class="h-8 ml-2">
                     </a>
                 </div>
 
@@ -145,10 +146,10 @@
                     <a href="/kerukunan" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Kerukunan</a>
                     <a href="/politik" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Politik</a>
                     <a href="/budaya" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Budaya</a>
-                    <a href="/khutbah" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Khutbah</a>
-                    <a href="/doa" class="block px-4 py-2 hover:bg-blue-800 transition-colors">Doa</a>
                 </div>
             </div>
+            <a href="/khutbah" class="px-4 py-3 hover:bg-blue-800 transition-colors">Khutbah</a>
+            <a href="/doa" class="px-4 py-3 hover:bg-blue-800 transition-colors">Doa</a>
             <a href="/populer" class="px-4 py-3 hover:bg-blue-800 transition-colors">Populer</a>
             <a href="/tentangkami" class="px-4 py-3 hover:bg-blue-800 transition-colors">Tentang Kami</a>
             <a href="/hubungikami" class="px-4 py-3 hover:bg-blue-800 transition-colors">Hubungi Kami</a>
@@ -170,10 +171,10 @@
                     <a href="/kerukunan" class="block px-8 py-2 hover:bg-blue-700 transition-colors">Kerukunan</a>
                     <a href="/politik" class="block px-8 py-2 hover:bg-blue-700 transition-colors">Politik</a>
                     <a href="/budaya" class="block px-8 py-2 hover:bg-blue-700 transition-colors">Budaya</a>
-                    <a href="/khutbah" class="block px-8 py-2 hover:bg-blue-700 transition-colors">Khutbah</a>
-                    <a href="/doa" class="block px-8 py-2 hover:bg-blue-700 transition-colors">Doa</a>
                 </div>
             </div>
+            <a href="/khutbah" class="block px-4 py-3 hover:bg-blue-800 transition-colors">Khutbah</a>
+            <a href="/doa" class="block px-4 py-3 hover:bg-blue-800 transition-colors">Doa</a>
             <a href="/populer" class="block px-4 py-3 hover:bg-blue-800 transition-colors">Populer</a>
             <a href="/tentangkami" class="block px-4 py-3 hover:bg-blue-800 transition-colors">Tentang Kami</a>
             <a href="/hubungikami" class="block px-4 py-3 hover:bg-blue-800 transition-colors">Hubungi Kami</a>
@@ -204,29 +205,20 @@
         <div class="container mx-auto px-2.5 md:px-4">
             <!-- Logo and Company Name -->
             <div class="flex flex-col items-center mb-8">
-                <img src="{{ asset('images/logoreligi.png') }}" alt="Arina.id" class="h-12 mb-2">
+                <img src="{{ asset('images/logoreligi.png') }}" alt="Arina.id" class="h-24 mb-2">
                 <p class="text-gray-600 dark:text-gray-400 text-center">Desa Secang, Kecamatan Kediri, Kabupaten Probolinggo, Jawa Timur</p>
             </div>
 
             <!-- Social Media Links -->
-            <div class="flex justify-center gap-4 mb-8 flex-wrap">
-                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700">
-                    <i class="fab fa-twitter text-gray-600 dark:text-gray-400"></i>
+            <div class="flex justify-center gap-4 mb-8">
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-red-600 transition-colors">
+                    <i class="fab fa-youtube fa-2x"></i>
                 </a>
-                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700">
-                    <i class="fab fa-facebook text-gray-600 dark:text-gray-400"></i>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-pink-600 transition-colors">
+                    <i class="fab fa-instagram fa-2x"></i>
                 </a>
-                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700">
-                    <i class="fab fa-instagram text-gray-600 dark:text-gray-400"></i>
-                </a>
-                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700">
-                    <i class="fab fa-youtube text-gray-600 dark:text-gray-400"></i>
-                </a>
-                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700">
-                    <i class="fab fa-tiktok text-gray-600 dark:text-gray-400"></i>
-                </a>
-                <a href="#" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-gray-700">
-                    <i class="fas fa-rss text-gray-600 dark:text-gray-400"></i>
+                <a href="#" class="text-gray-600 dark:text-gray-400 hover:text-black transition-colors">
+                    <i class="fab fa-tiktok fa-2x"></i>
                 </a>
             </div>
 
