@@ -295,7 +295,7 @@
 
     <div class="mt-6">
         <h2 class="text-xl font-bold mb-4 dark:text-white">Kategori</h2>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             <a href="#" class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-3 text-blue-900 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path d="M12 14l9-5-9-5-9 5 9 5z" />
@@ -325,20 +325,7 @@
                 <h3 class="font-semibold text-gray-800 dark:text-white">Budaya</h3>
                 <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Artikel budaya</p>
             </a>
-            <a href="#" class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-3 text-blue-900 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2m4-10a4 4 0 100-8 4 4 0 000 8zm0 0h4" />
-                </svg>
-                <h3 class="font-semibold text-gray-800 dark:text-white">Khutbah</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Kumpulan khutbah</p>
-            </a>
-            <a href="#" class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6 text-center hover:shadow-md transition-shadow">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mx-auto mb-3 text-blue-900 dark:text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                </svg>
-                <h3 class="font-semibold text-gray-800 dark:text-white">Doa</h3>
-                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Kumpulan doa</p>
-            </a>
+           
         </div>
     </div>
 </div>

@@ -57,40 +57,40 @@
 <body class="dark:bg-gray-900 dark:text-white">
     <!-- Top Navigation Bar -->
     <nav class="bg-white dark:bg-gray-800 border-b dark:border-gray-700">
-        <div class="container mx-auto px-2.5 md:px-[150px]">
-            <div class="flex justify-between items-center h-20">
+        <div class="container mx-auto px-2">
+            <div class="flex justify-between items-center h-16">
                 <!-- Logo Section with Hamburger Menu -->
-                <div class="flex-1 flex items-center gap-4">
+                <div class="flex-1 flex items-center gap-2">
                     <!-- Mobile Menu Button -->
                     <button onclick="toggleMobileMenu()" class="md:hidden">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
                     
-                    <a href="{{ url('/') }}" class="flex items-center">
-                        <img src="{{ asset('images/logoreligi.png') }}" alt="NU Online" class="h-14">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/2048px-Twitter_Verified_Badge.svg.png" alt="Terverifikasi" class="h-8 ml-2">
+                    <a href="{{ route('login') }}" class="flex items-center">
+                        <img src="{{ asset('images/logoreligi.png') }}" alt="NU Online" class="h-10">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/2048px-Twitter_Verified_Badge.svg.png" alt="Terverifikasi" class="h-6 ml-1">
                     </a>
                 </div>
 
                 <!-- Search Bar -->
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2">
                     <div class="relative hidden md:block">
                         <input type="text" placeholder="Cari Berita" 
-                            class="w-64 px-4 py-2 rounded-full bg-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-200">
-                        <button class="absolute right-3 top-2">
-                            <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            class="w-48 px-3 py-1.5 text-sm rounded-full bg-gray-100 focus:outline-none focus:ring-1 focus:ring-gray-200">
+                        <button class="absolute right-2 top-1.5">
+                            <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                         </button>
                     </div>
                     
                     <!-- Theme Toggle -->
-                    <div class="flex items-center space-x-3">
-                        <button onclick="toggleTheme()" class="w-12 h-6 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center transition duration-300 focus:outline-none shadow">
-                            <div class="w-6 h-6 relative rounded-full transition duration-500 transform bg-white dark:bg-gray-800 shadow-sm" :class="darkMode ? 'translate-x-6' : 'translate-x-0'">
-                                <svg class="w-4 h-4 text-gray-400 dark:text-yellow-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="flex items-center space-x-2">
+                        <button onclick="toggleTheme()" class="w-10 h-5 rounded-full bg-gray-200 dark:bg-gray-600 flex items-center transition duration-300 focus:outline-none shadow">
+                            <div class="w-5 h-5 relative rounded-full transition duration-500 transform bg-white dark:bg-gray-800 shadow-sm" :class="darkMode ? 'translate-x-5' : 'translate-x-0'">
+                                <svg class="w-3 h-3 text-gray-400 dark:text-yellow-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                                 </svg>
                             </div>
@@ -99,9 +99,9 @@
                         <!-- Language Selector -->
                         <div class="relative">
                             <button class="flex items-center" id="languageButton" onclick="toggleLanguageMenu()">
-                                <img src="https://flagcdn.com/w40/id.png" alt="Indonesia" class="w-6 h-4" id="selectedFlag">
-                                <span class="ml-2 text-sm" id="selectedLang">ID</span>
-                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <img src="https://flagcdn.com/w40/id.png" alt="Indonesia" class="w-5 h-3" id="selectedFlag">
+                                <span class="ml-1 text-xs" id="selectedLang">ID</span>
+                                <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                 </svg>
                             </button>
