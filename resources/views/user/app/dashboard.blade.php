@@ -8,19 +8,19 @@
         <div class="slider overflow-hidden">
             <div class="slides flex transition-transform duration-500">
                 <div class="relative w-full flex-shrink-0">
-                    <img src="{{ asset('images/header1.jpeg') }}" alt="Banner 1" class="w-full h-[250px] md:h-[400px] rounded-lg object-cover">
+                    <img src="{{ asset('images/beritabaru6.png') }}" alt="Banner 1" class="w-full h-[250px] md:h-[400px] rounded-lg object-cover">
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 md:p-8">
                         <span class="text-white bg-blue-900 dark:bg-blue-700 px-3 py-1 rounded-full text-xs md:text-sm mb-2 md:mb-3 inline-block">Berita Terkini</span>
-                        <h2 class="text-white text-xl md:text-3xl font-bold mb-2">Jumat Religius Untuk Membangun Karakter Positif</h2>
-                        <p class="text-gray-200 text-sm md:text-base mb-4">Sebuah terobosan baru dari sekolah smkn1pasean dengan bekerjasama dengan</p>
+                        <h2 class="text-white text-xl md:text-3xl font-bold mb-2">PKUB Cetak Prestasi Gemilang di Bawah Muhammad Adib Abdushomad</h2>
+                        <p class="text-gray-200 text-sm md:text-base mb-4">Dalam waktu hanya lima bulan sejak menjabat, Muhammad Adib Abdushomad, M.Ag, M.Ed, Ph.D</p>
                         <a href="#" class="inline-block bg-white text-blue-900 dark:bg-gray-800 dark:text-white px-4 md:px-6 py-2 rounded-full text-sm hover:bg-blue-900 hover:text-white dark:hover:bg-blue-700 transition-colors">Baca Selengkapnya</a>
                     </div>
                 </div>
                 <div class="relative w-full flex-shrink-0">
-                    <img src="{{ asset('images/header2.webp') }}" alt="Banner 2" class="w-full h-[250px] md:h-[400px] rounded-lg object-cover">
+                    <img src="{{ asset('images/beritabaru7.png') }}" alt="Banner 2" class="w-full h-[250px] md:h-[400px] rounded-lg object-cover">
                     <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 md:p-8">
                         <span class="text-white bg-blue-900 px-3 py-1 rounded-full text-xs md:text-sm mb-2 md:mb-3 inline-block">Artikel Khusus</span>
-                        <h2 class="text-white text-xl md:text-3xl font-bold mb-2">Munas-Konbes NU 2025 Momentum Gaspol NU Menggapai Kemaslahatan Indonesia</h2>
+                        <h2 class="text-white text-xl md:text-3xl font-bold mb-2">Dalam upaya menyambut pesanMenteri Agama tentang internasionalisasi</h2>
                         <a href="#" class="inline-block bg-white text-blue-900 px-4 md:px-6 py-2 rounded-full text-sm hover:bg-blue-900 hover:text-white transition-colors">Baca Selengkapnya</a>
                     </div>
                 </div>
@@ -81,10 +81,10 @@
         {{-- Left Column --}}
         <div class="md:col-span-3 space-y-6">
             <a href="/artikel" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
-                <img src="{{ asset('images/berita1.jpg') }}" alt="Article" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/beritabaru1.jpg') }}" alt="Article" class="w-full h-48 object-cover">
                 <div class="p-4">
                     <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-sm px-3 py-1 rounded-full mb-2">Nasional</span>
-                    <h3 class="font-bold text-lg mb-2 dark:text-white">Paradoks Religius tapi Nakal, Ketika Keimanan Hanya Menjadi Simbol
+                    <h3 class="font-bold text-lg mb-2 dark:text-white">Pusat Kerukunan Umat Beragama Bangun Kerja Sama Lintas Negara
                     <p class="text-gray-400 dark:text-gray-300 text-sm">Senin, 3 Februari 2025 | 06:00 WIB</p>
                 </div>
             </a>
@@ -109,20 +109,20 @@
         {{-- Center Column (Featured Articles) --}}
         <div class="md:col-span-6 space-y-6">
             <a href="/artikel" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
-                <img src="{{ asset('images/berita3.jpeg') }}" alt="Main Article" class="w-full h-[300px] md:h-[400px] object-cover">
+                <img src="{{ asset('images/GusAdib.jpg') }}" alt="Main Article" class="w-full h-[300px] md:h-[400px] object-cover">
                 <div class="p-4">
-                    <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-sm px-3 py-1 rounded-full mb-2">Laporan Khusus</span>
-                    <h2 class="text-xl font-bold mb-2 dark:text-white">Menjalin Kedektan dengan Al-Qur'an: One Day One Juz dan Khotmil Qur'an di Desa Slamparejo</h2>
+                    <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-sm px-3 py-1 rounded-full mb-2">Karya Gus Adib</span>
+                    <h2 class="text-xl font-bold mb-2 dark:text-white">Pojok Gus Adib</h2>
                     <p class="text-gray-400 dark:text-gray-300 text-sm">Senin, 3 Februari 2025 | 12:30 WIB</p>
                 </div>
             </a>
 
             <a href="/artikel" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
                 <div class="flex">
-                    <img src="{{ asset('images/berita2.jpg') }}" alt="Article" class="w-32 h-32 object-cover">
+                    <img src="{{ asset('images/beritabaru3.png') }}" alt="Article" class="w-32 h-32 object-cover">
                     <div class="p-2 flex-1">
                         <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded-full mb-1">Nasional</span>
-                        <h3 class="font-bold text-sm mb-1 dark:text-white">indonesia sebagai negara paling religius, tapi juga sebagai negera paling munafik</h3>
+                        <h3 class="font-bold text-sm mb-1 dark:text-white">Tokoh Agama Diminta Jadi Penjaga Harmoni di Tengah Pilkada Serentak 2024</h3>
                         <p class="text-gray-400 dark:text-gray-300 text-xs">3 Feb 2025</p>
                     </div>
                 </div>
@@ -130,10 +130,10 @@
 
             <a href="/artikel" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
                 <div class="flex">
-                    <img src="{{ asset('images/berita4.jpg') }}" alt="Article" class="w-32 h-32 object-cover">
+                    <img src="{{ asset('images/beritabaru5.jpeg') }}" alt="Article" class="w-32 h-32 object-cover">
                     <div class="p-2 flex-1">
                         <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded-full mb-1">Laporan Khusus</span>
-                        <h3 class="font-bold text-sm mb-1 dark:text-white">Transformasi Digital dalam Pendidikan Islam Modern</h3>
+                        <h3 class="font-bold text-sm mb-1 dark:text-white">Kemenag RI Imbau Seluruh Elemen Masyarakat Dukung Pilkada 2024 Aman dan Bermartabat</h3>
                         <p class="text-gray-400 dark:text-gray-300 text-xs">3 Feb 2025</p>
                     </div>
                 </div>
@@ -143,10 +143,10 @@
         {{-- Right Column --}}
         <div class="md:col-span-3 space-y-6">
             <a href="/artikel" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
-                <img src="{{ asset('images/berita5.jpg') }}" alt="Article" class="w-full h-48 object-cover">
+                <img src="{{ asset('images/beritabaru2.png') }}" alt="Article" class="w-full h-48 object-cover">
                 <div class="p-4">
                     <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-sm px-3 py-1 rounded-full mb-2">Nasional</span>
-                    <h3 class="font-bold text-lg mb-2 dark:text-white">Momentum Spiritualitas Mahasiswa KKM Philoxenia Semarakkan Diba' Rutinan Bersama Warga Glagah Ombo</h3>
+                    <h3 class="font-bold text-lg mb-2 dark:text-white">Kepala PKUB Buka Gebyar Toleransi di Kota Singkawang</h3>
                     <p class="text-gray-400 dark:text-gray-300 text-sm">Ahad, 2 Februari 2025 | 16:00 WIB</p>
                 </div>
             </a>
@@ -183,14 +183,14 @@
                     <div class="flex gap-4 p-4">
                         <div class="flex-1">
                             <span class="inline-block bg-blue-900 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded mb-2">Laporan Khusus</span>
-                            <h3 class="font-bold text-base mb-1 dark:text-white">Redam Konflik Orang Tua dan Anak dengan Cara Meninggalkan Ego Antargenerasi</h3>
+                            <h3 class="font-bold text-base mb-1 dark:text-white">Pusat Kerukunan Umat Beragama Bangun Kerja Sama Lintas Negara</h3>
                             <div class="flex justify-between items-center">
                                 <p class="text-gray-400 dark:text-gray-300 text-sm">Senin, 3 Februari 2025 | 11:30 WIB</p>
                                 <span class="text-gray-500 dark:text-gray-400 text-sm">2.5k pembaca</span>
                             </div>
                         </div>
                         <div class="flex-shrink-0">
-                            <img src="{{ asset('images/berita5.jpeg') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
+                            <img src="{{ asset('images/beritabaru1.jpg') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
                         </div>
                     </div>
                 </a>
@@ -200,14 +200,14 @@
                     <div class="flex gap-4 p-4">
                         <div class="flex-1">
                             <span class="inline-block bg-blue-900 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded mb-2">Nasional</span>
-                            <h3 class="font-bold text-base mb-1 dark:text-white">4 Jalur Penerimaan Murid Baru 2025: Domisili, Prestasi, Afirmasi, dan Mutasi</h3>
+                            <h3 class="font-bold text-base mb-1 dark:text-white">Kepala PKUB Buka Gebyar Toleransi di Kota Singkawangi Jawa timur</h3>
                             <div class="flex justify-between items-center">
                                 <p class="text-gray-400 dark:text-gray-300 text-sm">Senin, 3 Februari 2025 | 10:00 WIB</p>
                                 <span class="text-gray-500 dark:text-gray-400 text-sm">1.8k pembaca</span>
                             </div>
                         </div>
                         <div class="flex-shrink-0">
-                            <img src="{{ asset('images/berita6.jpeg') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
+                            <img src="{{ asset('images/beritabaru2.png') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
                         </div>
                     </div>
                 </a>
@@ -217,14 +217,14 @@
                     <div class="flex gap-4 p-4">
                         <div class="flex-1">
                             <span class="inline-block bg-blue-900 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded mb-2">Opini</span>
-                            <h3 class="font-bold text-base mb-1 dark:text-white">100 Tahun NU, Ekor Khittah 1926</h3>
+                            <h3 class="font-bold text-base mb-1 dark:text-white">Kementerian Agama RI Himbau Seluruh Elemen Masyarakat Dukung Pilkada Serentak 2024 yang Aman</h3>
                             <div class="flex justify-between items-center">
                                 <p class="text-gray-400 dark:text-gray-300 text-sm">Senin, 3 Februari 2025 | 09:00 WIB</p>
                                 <span class="text-gray-500 dark:text-gray-400 text-sm">3.2k pembaca</span>
                             </div>
                         </div>
                         <div class="flex-shrink-0">
-                            <img src="{{ asset('images/berita7.webp') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
+                            <img src="{{ asset('images/beritabaru8.jpg') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
                         </div>
                     </div>
                 </a>
@@ -237,14 +237,14 @@
                     <div class="flex gap-4 p-4">
                         <div class="flex-1">
                             <span class="inline-block bg-blue-900 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded mb-2">Tafsir</span>
-                            <h3 class="font-bold text-base mb-1 dark:text-white">Tafsir Surat Al-Anbiya Ayat 30: Air Sebagai Sumber Kehidupan Manusia</h3>
+                            <h3 class="font-bold text-base mb-1 dark:text-white">Kemenag RI Imbau Seluruh Elemen Masyarakat Dukung Pilkada 2024 Aman dan Bermartabat</h3>
                             <div class="flex justify-between items-center">
                                 <p class="text-gray-400 dark:text-gray-300 text-sm">Senin, 3 Februari 2025 | 08:00 WIB</p>
                                 <span class="text-gray-500 dark:text-gray-400 text-sm">1.5k pembaca</span>
                             </div>
                         </div>
                         <div class="flex-shrink-0">
-                            <img src="{{ asset('images/berita8.webp') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
+                            <img src="{{ asset('images/beritabaru5.jpeg') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
                         </div>
                     </div>
                 </a>
@@ -254,14 +254,14 @@
                     <div class="flex gap-4 p-4">
                         <div class="flex-1">
                             <span class="inline-block bg-blue-900 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded mb-2">Nasional</span>
-                            <h3 class="font-bold text-base mb-1 dark:text-white">LP Ma'arif PBNU Dorong Transformasi Digital dalam Pembelajaran</h3>
+                            <h3 class="font-bold text-base mb-1 dark:text-white">Tokoh Agama Diminta Jadi Penjaga Harmoni di Tengah Pilkada Serentak 2024 </h3>
                             <div class="flex justify-between items-center">
                                 <p class="text-gray-400 dark:text-gray-300 text-sm">Ahad, 2 Februari 2025 | 14:45 WIB</p>
                                 <span class="text-gray-500 dark:text-gray-400 text-sm">2.1k pembaca</span>
                             </div>
                         </div>
                         <div class="flex-shrink-0">
-                            <img src="{{ asset('images/berita9.webp') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
+                            <img src="{{ asset('images/beritabaru3.png') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
                         </div>
                     </div>
                 </a>
@@ -271,14 +271,14 @@
                     <div class="flex gap-4 p-4">
                         <div class="flex-1">
                             <span class="inline-block bg-blue-900 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded mb-2">Nasional</span>
-                            <h3 class="font-bold text-base mb-1 dark:text-white">Indonesia Juara Umum MTQ Internasional 2025, Ini Harapan Wamenag</h3>
+                            <h3 class="font-bold text-base mb-1 dark:text-white">IPKUB lakukan Harmonisasi Program Kerja 2025 Berama Staf Khusus Menteri Agama</h3>
                             <div class="flex justify-between items-center">
                                 <p class="text-gray-400 dark:text-gray-300 text-sm">Ahad, 2 Februari 2025 | 13:30 WIB</p>
                                 <span class="text-gray-500 dark:text-gray-400 text-sm">1.9k pembaca</span>
                             </div>
                         </div>
                         <div class="flex-shrink-0">
-                            <img src="{{ asset('images/berita10.webp') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
+                            <img src="{{ asset('images/beritabaru7.png') }}" alt="News Thumbnail" class="w-32 h-20 object-cover rounded">
                         </div>
                     </div>
                 </a>

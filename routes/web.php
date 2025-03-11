@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Admin\DashboardController;
 
 Route::get('/', function () {
     return view('user.app.dashboard');
@@ -49,7 +50,7 @@ Route::get('/hubungikami', function () {
 });
 
 Route::get('/artikel', function () {
-    return view('user.pages.artikel');
+    return view('user.pages.artikel/*  */');
 });
 
 Route::get('/images/{filename}', function($filename) {
@@ -68,6 +69,15 @@ Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 
-Route::post('/login', [LoginController::class, 'login']);
+Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('login', [LoginController::class, 'login']);
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
 Route::post('/register', [RegisterController::class, 'register']);
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin/dashboard', function () {
+        return view('admin.app.dashboard');
+    })->name('admin.app.dashboard');
+});
 
