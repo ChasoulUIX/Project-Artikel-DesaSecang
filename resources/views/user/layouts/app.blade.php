@@ -88,7 +88,20 @@
 
                         <!-- Language Controls -->
                         <div class="flex items-center">
-                            <div class="relative">
+                            <!-- Mobile Search -->
+                            <div class="md:hidden relative">
+                                <button class="flex items-center p-2" id="mobileSearchButton" onclick="toggleMobileSearch()">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                                    </svg>
+                                </button>
+                                <div class="absolute right-0 mt-2 w-screen px-4 hidden" id="mobileSearchBar">
+                                    <input type="text" class="w-full p-2 rounded-lg border dark:border-gray-700 dark:bg-gray-800 dark:text-white" placeholder="Search...">
+                                </div>
+                            </div>
+                            
+                            <!-- Desktop Language Controls (hide on mobile) -->
+                            <div class="hidden md:block relative">
                                 <button class="flex items-center" id="languageButton" onclick="toggleLanguageMenu()">
                                     <img src="https://flagcdn.com/w40/id.png" alt="Indonesia" class="w-5 h-3" id="selectedFlag">
                                     <span class="ml-1 text-xs" id="selectedLang">ID</span>
@@ -183,8 +196,8 @@
                             <a href="#" class="hover:text-blue-900">Jakarta,</a>
                             <a href="#" class="hover:text-blue-900">Tangerang</a>
                         </div>
-                        <div class="text-sm text-gray-500">
-                            {{ \Carbon\Carbon::now()->format('l, d F Y') }}
+                        <div class="text-sm text-gray-500" id="currentDateTime">
+                            <!-- Date will be inserted here by JavaScript -->
                         </div>
                     </div>
                 </div>
@@ -337,6 +350,45 @@
                     const mobileSubmenu = document.getElementById('mobileSubmenu');
                     mobileSubmenu.classList.toggle('hidden');
                 }
+
+                function toggleMobileSearch() {
+                    const searchBar = document.getElementById('mobileSearchBar');
+                    const searchButton = document.getElementById('mobileSearchButton');
+                    
+                    searchBar.classList.toggle('hidden');
+                    
+                    if (!searchBar.classList.contains('hidden')) {
+                        searchBar.querySelector('input').focus();
+                    }
+                }
+
+                // Close search bar when clicking outside
+                document.addEventListener('click', function(event) {
+                    const searchBar = document.getElementById('mobileSearchBar');
+                    const searchButton = document.getElementById('mobileSearchButton');
+                    
+                    if (!searchButton.contains(event.target) && !searchBar.contains(event.target)) {
+                        searchBar.classList.add('hidden');
+                    }
+                });
+
+                function updateDateTime() {
+                    const now = new Date();
+                    const days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+                    const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+                    
+                    const day = days[now.getDay()];
+                    const date = now.getDate();
+                    const month = months[now.getMonth()];
+                    const year = now.getFullYear();
+                    
+                    const formattedDate = `${day}, ${date} ${month} ${year}`;
+                    document.getElementById('currentDateTime').textContent = formattedDate;
+                }
+
+                // Update date immediately and then every second
+                updateDateTime();
+                setInterval(updateDateTime, 1000);
             </script>
 
             <!-- Add hidden Google Translate Element -->
