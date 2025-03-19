@@ -173,3 +173,13 @@ Route::get('/{category}', [App\Http\Controllers\Admin\ArticleController::class, 
     ->name('kategori.show')
     ->where('category', 'politik|pendidikan|kerukunan|budaya|berita|khutbah|doa|populer');
 
+// Admin routes group
+Route::middleware(['auth'])->prefix('admin')->name('admin.')->group(function () {
+    Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
+    
+    // For backward compatibility (if needed)
+    Route::get('/app/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('app.dashboard');
+    
+    // ... other admin routes ...
+});
+

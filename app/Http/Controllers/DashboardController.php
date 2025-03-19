@@ -57,13 +57,17 @@ class DashboardController extends Controller
                 $data['totalUsers'] = User::count();
             }
             
+            $popularArticles = Article::orderBy('view_count', 'desc')
+                                     ->take(6)
+                                     ->get();
+            
             // Return view dengan data yang telah disiapkan
-            return view('dashboard', $data);
+            return view('user.app.dashboard', compact('data', 'popularArticles'));
             
         } catch (\Exception $e) {
             \Log::error('Dashboard error: ' . $e->getMessage());
             $data['error'] = 'Terjadi kesalahan saat memuat data dashboard.';
-            return view('dashboard', $data);
+            return view('user.app.dashboard', $data);
         }
     }
 } 

@@ -25,6 +25,10 @@
                                 Baca Selengkapnya
                             </a>
                         </div>
+                        
+                        @if($slide->created_at->diffInDays(now()) < 3)
+                            <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">Baru</span>
+                        @endif
                     </div>
                     @endforeach
                 @else
@@ -94,7 +98,7 @@
         <div class="md:col-span-3 space-y-6">
             @if(isset($leftColumnArticles) && $leftColumnArticles->count() > 0)
                 @foreach($leftColumnArticles as $article)
-                <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
+                <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden relative">
                     @if($article->image)
                     <img src="{{ url('images/' . $article->image) }}" alt="{{ $article->title }}" class="w-full h-48 object-cover">
                     @else
@@ -106,7 +110,23 @@
                         <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-sm px-3 py-1 rounded-full mb-2">{{ ucfirst($article->category) }}</span>
                         <h3 class="font-bold text-lg mb-2 dark:text-white">{{ $article->title }}</h3>
                         <p class="text-gray-400 dark:text-gray-300 text-sm">{{ $article->created_at->format('D, d M Y | H:i') }} WIB</p>
+                        
+                        <div class="flex space-x-2 mt-2">
+                            <a href="https://wa.me/?text={{ urlencode($article->title . ' ' . route('artikel.view', $article->id)) }}" target="_blank" class="text-green-500 hover:text-green-700">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('artikel.view', $article->id)) }}" target="_blank" class="text-blue-600 hover:text-blue-800">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?url={{ urlencode(route('artikel.view', $article->id)) }}&text={{ urlencode($article->title) }}" target="_blank" class="text-blue-400 hover:text-blue-600">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
                     </div>
+                    
+                    @if($article->created_at->diffInDays(now()) < 3)
+                        <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">Baru</span>
+                    @endif
                 </a>
                 @endforeach
             @else
@@ -116,7 +136,7 @@
                 @endphp
                 
                 @forelse($articlesToShow as $article)
-                <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
+                <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden relative">
                     @if($article->image)
                     <img src="{{ url('images/' . $article->image) }}" alt="{{ $article->title }}" class="w-full h-48 object-cover">
                     @else
@@ -128,7 +148,23 @@
                         <span class="inline-block bg-blue-800 dark:bg-blue-700 text-white text-sm px-3 py-1 rounded-full mb-2">{{ ucfirst($article->category) }}</span>
                         <h3 class="font-bold text-lg mb-2 dark:text-white">{{ $article->title }}</h3>
                         <p class="text-gray-400 dark:text-gray-300 text-sm">{{ $article->created_at->format('D, d M Y | H:i') }} WIB</p>
+                        
+                        <div class="flex space-x-2 mt-2">
+                            <a href="https://wa.me/?text={{ urlencode($article->title . ' ' . route('artikel.view', $article->id)) }}" target="_blank" class="text-green-500 hover:text-green-700">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('artikel.view', $article->id)) }}" target="_blank" class="text-blue-600 hover:text-blue-800">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://twitter.com/intent/tweet?url={{ urlencode(route('artikel.view', $article->id)) }}&text={{ urlencode($article->title) }}" target="_blank" class="text-blue-400 hover:text-blue-600">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
                     </div>
+                    
+                    @if($article->created_at->diffInDays(now()) < 3)
+                        <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">Baru</span>
+                    @endif
                 </a>
                 @empty
                 <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
@@ -140,8 +176,8 @@
 
         {{-- Center Column (Featured Article) --}}
         <div class="md:col-span-6 space-y-6">
-            @if($featuredArticle)
-            <a href="{{ route('artikel.view', $featuredArticle->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
+            @if(isset($featuredArticle) && $featuredArticle)
+            <a href="{{ route('artikel.view', $featuredArticle->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden relative">
                 <img src="{{ $featuredArticle->image ? url('images/' . $featuredArticle->image) : asset('images/GusAdib.jpg') }}" 
                      alt="{{ $featuredArticle->title }}" 
                      class="w-full h-[300px] md:h-[400px] object-cover">
@@ -161,7 +197,23 @@
                             <i class="fas fa-eye mr-1"></i> {{ $featuredArticle->view_count }} kali
                         </span>
                     </div>
+                    
+                    <div class="flex space-x-2 mt-2">
+                        <a href="https://wa.me/?text={{ urlencode($featuredArticle->title . ' ' . route('artikel.view', $featuredArticle->id)) }}" target="_blank" class="text-green-500 hover:text-green-700">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('artikel.view', $featuredArticle->id)) }}" target="_blank" class="text-blue-600 hover:text-blue-800">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/intent/tweet?url={{ urlencode(route('artikel.view', $featuredArticle->id)) }}&text={{ urlencode($featuredArticle->title) }}" target="_blank" class="text-blue-400 hover:text-blue-600">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
                 </div>
+                
+                @if($featuredArticle->created_at->diffInDays(now()) < 3)
+                    <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">Baru</span>
+                @endif
             </a>
             @else
             <a href="#" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
@@ -176,8 +228,8 @@
 
             {{-- Side Articles below featured --}}
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                @forelse($sideArticles as $article)
-                <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden h-full">
+                @forelse(isset($sideArticles) ? $sideArticles : [] as $article)
+                <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden h-full relative">
                     <div class="flex flex-col h-full">
                         @if($article->image)
                         <img src="{{ url('images/' . $article->image) }}" alt="{{ $article->title }}" class="w-full h-40 object-cover">
@@ -199,8 +251,24 @@
                                     <i class="fas fa-eye mr-1"></i> {{ $article->view_count }}
                                 </span>
                             </div>
+                            
+                            <div class="flex space-x-2 mt-2">
+                                <a href="https://wa.me/?text={{ urlencode($article->title . ' ' . route('artikel.view', $article->id)) }}" target="_blank" class="text-green-500 hover:text-green-700 text-xs">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('artikel.view', $article->id)) }}" target="_blank" class="text-blue-600 hover:text-blue-800 text-xs">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?url={{ urlencode(route('artikel.view', $article->id)) }}&text={{ urlencode($article->title) }}" target="_blank" class="text-blue-400 hover:text-blue-600 text-xs">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
+                    
+                    @if($article->created_at->diffInDays(now()) < 3)
+                        <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">Baru</span>
+                    @endif
                 </a>
                 @empty
                 @for ($i = 0; $i < 2; $i++)
@@ -216,7 +284,7 @@
         <div class="md:col-span-3 space-y-6">
             @if(isset($rightColumnArticles) && $rightColumnArticles->count() > 0)
                 @foreach($rightColumnArticles as $article)
-                    <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
+                    <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden relative">
                         @if($article->image)
                             <img src="{{ url('images/' . $article->image) }}" alt="{{ $article->title }}" class="w-full h-48 object-cover">
                         @else
@@ -230,7 +298,23 @@
                             <p class="text-gray-400 dark:text-gray-300 text-sm">
                                 {{ $article->created_at->format('D, d M Y | H:i') }} WIB
                             </p>
+                            
+                            <div class="flex space-x-2 mt-2">
+                                <a href="https://wa.me/?text={{ urlencode($article->title . ' ' . route('artikel.view', $article->id)) }}" target="_blank" class="text-green-500 hover:text-green-700">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('artikel.view', $article->id)) }}" target="_blank" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?url={{ urlencode(route('artikel.view', $article->id)) }}&text={{ urlencode($article->title) }}" target="_blank" class="text-blue-400 hover:text-blue-600">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
                         </div>
+                        
+                        @if($article->created_at->diffInDays(now()) < 3)
+                            <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">Baru</span>
+                        @endif
                     </a>
                 @endforeach
             @else
@@ -240,7 +324,7 @@
                 @endphp
                 
                 @forelse($articlesToShow as $article)
-                    <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden">
+                    <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden relative">
                         @if($article->image)
                             <img src="{{ url('images/' . $article->image) }}" alt="{{ $article->title }}" class="w-full h-48 object-cover">
                         @else
@@ -254,7 +338,23 @@
                             <p class="text-gray-400 dark:text-gray-300 text-sm">
                                 {{ $article->created_at->format('D, d M Y | H:i') }} WIB
                             </p>
+                            
+                            <div class="flex space-x-2 mt-2">
+                                <a href="https://wa.me/?text={{ urlencode($article->title . ' ' . route('artikel.view', $article->id)) }}" target="_blank" class="text-green-500 hover:text-green-700">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('artikel.view', $article->id)) }}" target="_blank" class="text-blue-600 hover:text-blue-800">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://twitter.com/intent/tweet?url={{ urlencode(route('artikel.view', $article->id)) }}&text={{ urlencode($article->title) }}" target="_blank" class="text-blue-400 hover:text-blue-600">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
                         </div>
+                        
+                        @if($article->created_at->diffInDays(now()) < 3)
+                            <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">Baru</span>
+                        @endif
                     </a>
                 @empty
                     <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
@@ -274,8 +374,8 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             {{-- Left Column --}}
             <div class="space-y-4">
-                @forelse($popularArticles->take(3) as $article)
-                <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden h-[140px]">
+                @forelse(isset($popularArticles) ? $popularArticles->take(3) : [] as $article)
+                <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden h-[140px] relative">
                     <div class="flex h-full">
                         <div class="flex-1 p-4 min-w-0">
                             <div class="h-full flex flex-col">
@@ -299,6 +399,10 @@
                                  class="w-full h-[140px] object-cover">
                         </div>
                     </div>
+                    
+                    @if($article->created_at->diffInDays(now()) < 3)
+                        <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">Baru</span>
+                    @endif
                 </a>
                 @empty
                 <div class="bg-white dark:bg-gray-800 rounded-lg shadow-sm p-6">
@@ -309,35 +413,35 @@
 
             {{-- Right Column --}}
             <div class="space-y-4">
-                @forelse($popularArticles->skip(3)->take(3) as $article)
-                <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden h-[140px]">
-                    <div class="flex h-full">
-                        <div class="flex-1 p-4 min-w-0">
-                            <div class="h-full flex flex-col">
-                                <span class="inline-block bg-blue-900 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded mb-2 w-fit">
-                                    {{ ucfirst($article->category) }}
-                                </span>
-                                <h3 class="font-bold text-base mb-1 dark:text-white line-clamp-2">{{ $article->title }}</h3>
-                                <div class="flex justify-between items-center mt-auto">
-                                    <p class="text-gray-400 dark:text-gray-300 text-sm truncate">
-                                        {{ $article->created_at->format('d M Y') }}
-                                    </p>
-                                    <span class="text-gray-500 dark:text-gray-400 text-sm whitespace-nowrap ml-2">
-                                        {{ $article->view_count }}x dibaca
+                @if(isset($popularArticles))
+                    @foreach($popularArticles->skip(3)->take(3) as $article)
+                    <a href="{{ route('artikel.view', $article->id) }}" class="block bg-white dark:bg-gray-800 rounded-lg shadow-sm overflow-hidden h-[140px]">
+                        <div class="flex h-full">
+                            <div class="flex-1 p-4 min-w-0">
+                                <div class="h-full flex flex-col">
+                                    <span class="inline-block bg-blue-900 dark:bg-blue-700 text-white text-xs px-2 py-0.5 rounded mb-2 w-fit">
+                                        {{ ucfirst($article->category) }}
                                     </span>
+                                    <h3 class="font-bold text-base mb-1 dark:text-white line-clamp-2">{{ $article->title }}</h3>
+                                    <div class="flex justify-between items-center mt-auto">
+                                        <p class="text-gray-400 dark:text-gray-300 text-sm truncate">
+                                            {{ $article->created_at->format('d M Y') }}
+                                        </p>
+                                        <span class="text-gray-500 dark:text-gray-400 text-sm whitespace-nowrap ml-2">
+                                            {{ $article->view_count }}x dibaca
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
+                            <div class="flex-shrink-0 w-32">
+                                <img src="{{ $article->image ? url('images/' . $article->image) : asset('images/default.jpg') }}" 
+                                     alt="{{ $article->title }}" 
+                                     class="w-full h-[140px] object-cover">
+                            </div>
                         </div>
-                        <div class="flex-shrink-0 w-32">
-                            <img src="{{ $article->image ? url('images/' . $article->image) : asset('images/default.jpg') }}" 
-                                 alt="{{ $article->title }}" 
-                                 class="w-full h-[140px] object-cover">
-                        </div>
-                    </div>
-                </a>
-                @empty
-                <!-- Skip if empty since we already have a message in the left column -->
-                @endforelse
+                    </a>
+                    @endforeach
+                @endif
             </div>
         </div>
 
@@ -417,21 +521,4 @@
     }
 </style>
 
-<!-- Untuk artikel yang baru dibuat (kurang dari 3 hari) -->
-@if($article->created_at->diffInDays(now()) < 3)
-    <span class="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">Baru</span>
-@endif
-
-<!-- Tombol share di artikel -->
-<div class="flex space-x-2 mt-2">
-    <a href="https://wa.me/?text={{ urlencode($article->title . ' ' . route('artikel.view', $article->id)) }}" target="_blank" class="text-green-500 hover:text-green-700">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(route('artikel.view', $article->id)) }}" target="_blank" class="text-blue-600 hover:text-blue-800">
-        <i class="fab fa-facebook"></i>
-    </a>
-    <a href="https://twitter.com/intent/tweet?url={{ urlencode(route('artikel.view', $article->id)) }}&text={{ urlencode($article->title) }}" target="_blank" class="text-blue-400 hover:text-blue-600">
-        <i class="fab fa-twitter"></i>
-    </a>
-</div>
 @endsection

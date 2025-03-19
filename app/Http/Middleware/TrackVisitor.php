@@ -15,38 +15,34 @@ class TrackVisitor
     public function handle(Request $request, Closure $next): Response
     {
         $response = $next($request);
+        
+        // Only track GET requests that are not admin or api routes
+        if ($request->isMethod('GET') && 
+            !$request->is('admin/*') && 
+            !$request->is('api/*')) {
+            
+            try {
+                // Get the article ID if viewing an article
+                $articleId = null;
+                $route = $request->route();
+                if ($route && $route->getName() == 'articles.show' && $route->hasParameter('article')) {
+                    $articleId = $route->parameter('article');
+                }
 
-        if (!$request->ajax() && $request->method() === 'GET') {
-            $this->logVisit($request);
-        }
-
-        return $response;
-    }
-
-    private function logVisit(Request $request)
-    {
-        try {
-            $articleId = null;
-            $route = $request->route();
-
-            // Cek apakah halaman yang dikunjungi adalah halaman artikel
-            if ($route && $route->getName() === 'artikel.view') {
-                $articleId = $route->parameter('id');
+                // Log the visit
+                VisitorLog::create([
+                    'ip_address' => $request->ip(),
+                    'user_agent' => $request->userAgent(),
+                    'article_id' => $articleId,
+                    'url' => $request->fullUrl(),
+                    'session_id' => $request->session()->getId(),
+                ]);
+            } catch (\Exception $e) {
+                // Just log the error but don't interrupt the user
+                \Log::error('Visitor tracking error: ' . $e->getMessage());
             }
-
-            // Simpan log kunjungan
-            VisitorLog::create([
-                'ip_address' => $request->ip(),
-                'user_agent' => $request->userAgent(),
-                'article_id' => $articleId,
-                'user_id' => auth()->id(),
-                'page_visited' => $request->fullUrl(),
-                'referrer' => $request->header('referer'),
-                // Untuk data geografis bisa menggunakan layanan pihak ketiga seperti geoip
-            ]);
-        } catch (\Exception $e) {
-            // Log error tanpa menghentikan request
-            \Log::error('Error tracking visitor: ' . $e->getMessage());
         }
+        
+        return $response;
     }
 } 
